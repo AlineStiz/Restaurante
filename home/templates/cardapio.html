@@ -1,0 +1,35 @@
+{% load static %}
+
+
+ <section class="probootstrap-section-bg overlay" style="background-image: url({% static 'img/hero_bg_4.jfif' %});"  data-stellar-background-ratio="0.5" data-section="cardapio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center probootstrap-animate">
+            <div class="probootstrap-heading">
+              <h2 class="primary-heading">Upcoming</h2>
+              <h3 class="secondary-heading">Our Events</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="probootstrap-section">
+      <div class="container">
+        <div class="row">
+
+
+          {% for p in pratos %}
+          <div class="col-lg-4 col-md-6 probootstrap-animate">
+            <div class="probootstrap-block-image">
+              <figure><img src="{{ p.imagem.thumb.url }}" alt="{{ p.nome }}"></figure>
+              <div class="text">
+                <h5><p>R$:{{ p.preco }} un</p><h5>
+                <h3><a href="#">{{ p.nome }}</a></h3>
+                <p>{{ p.ingrediente }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>

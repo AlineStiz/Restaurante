@@ -1,0 +1,80 @@
+{% load static %}
+
+    <section class="probootstrap-section probootstrap-bg-white" data-section="contato">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 text-center probootstrap-animate">
+            <div class="probootstrap-heading dark">
+              <h1 class="primary-heading">Contate-nos</h1><br>
+              <h3 class="secondary-heading">Orçamentos</h3>
+            </div>
+            <p>Faça um orçamento para seu evento. <br>Buffet a domicílio para casamentos, aniversários, eventos corporativos, comemorações, bodas e muito mais.</p>
+          </div>
+          <div class="col-md-6 col-md-push-1 probootstrap-animate">
+            <form id="contato" method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required data-error="Please enter your name">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" placeholder="E-mail" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                   <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Assunto" id="assunto" name="assunto" class="form-control" required data-error="Please enter your subject">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea class="form-control" id="mensagem" placeholder="Mensagem" name="mensagem" rows="7" data-error="Write your message" required></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="submit-button text-left">
+                      <button class="btn btn-common" id="form-submit" type="submit">Enviar e-mail</button>
+                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+      <br>
+
+
+
+<!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        $(document).ready(function(){
+            {% block domready %}
+
+          <div className="container">
+            {% if messages %}
+            {% for m in messages %}
+            <div className="alert alert-danger {{ m.tags }}">
+              <button type="button" className="close" data-dismiss="alert"></button>
+              <strong>{{m}}</strong>
+            </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+
+            {% endblock %}
+        });
+    </script>
+
+-->
+

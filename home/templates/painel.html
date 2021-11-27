@@ -1,0 +1,36 @@
+{% load static %}
+
+        <div class="container " data-section="painel">
+            <h1 class="text-center" >Painel de atividades</h1>
+
+            <div class="row">
+                <div class="col-sm-6">
+                <form action="." method="GET" class="form-inline" >
+                </form>
+                </div>
+            </div>
+            <br>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <h2><th scope="col"class="text-center">Atividade</th></h2>
+                        <h2><th scope="col"class="text-center">A fazer</th></h2>
+                        <h2><th scope="col"class="text-center">Fazendo</th></h2>
+                        <h2><th scope="col"class="text-center">Feito</th></h2>
+                    </tr>
+                </thead>
+                <tbody>
+                        {% for a in atividades %}
+                        <tr>
+                            <h2><td scope="row"class="text-center">{{a.descricao}}</td></h2>
+                            <h2><td scope="row"class="text-center">{{a.fazer}}</td></h2>
+                            <h2><td scope="row"class="text-center">{{a.fazendo}}</td></h2>
+                            <h2><td scope="row"class="text-center">{{a.feito}}</td></h2>
+
+                        </tr>
+                        {% endfor %}
+
+                </tbody>
+            </table>
+        </div>

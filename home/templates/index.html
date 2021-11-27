@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  {% if user.is_anonymous %}
+
+    {% include 'base.html' %}
+
+    {% include 'inicio.html' %}
+
+    {% include 'Sobre_nos.html' %}
+
+    {% include 'cardapio.html'%}
+
+    {% include 'pedidos.html' %}
+
+    {% include 'receitas_em_pdf.html'%}
+
+    {% include 'contato.html'%}
+
+    {% include 'rodape.html'%}
+
+  {% else %}
+
+    {% include 'base_logado.html' %}
+
+    {% include 'inicio.html' %}
+
+    {% include 'painel.html' %}
+
+    {% include 'Sobre_nos.html' %}
+
+    {% include 'cardapio.html'%}
+
+    {% include 'pedidos.html' %}
+
+    {% include 'receitas_em_pdf.html'%}
+
+    {% include 'contato.html'%}
+
+    {% include 'rodape.html'%}
+
+  {% endif %}
+
+
+{% endblock%}

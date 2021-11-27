@@ -1,0 +1,59 @@
+{% load static %}
+
+
+
+     <div class="container">
+      {% if messages %}
+        {% for m in messages %}
+          <div class="alert alert-danger {{ m.tags }}">
+            <button type="button" class="close" data-dismiss="alert"></button>
+            <strong>{{m}}</strong>
+          </div>
+        {% endfor %}
+      {% endif %}
+     </div>
+
+    <section class="flexslider" data-section="inicio">
+      <ul class="slides">
+        <li style="background-image: url({% static 'img/hero_bg_1.jfif' %})" class="overlay" data-stellar-background-ratio="0.5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
+                  <br><br><br><h1 class="primary-heading">Saudável</h1>
+                  <h3 class="secondary-heading">Saladas</h3>
+                  <p class="sub-heading">#PraticoEquilibradoDelicioso </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li style="background-image: url({% static 'img/hero_bg_2.jpeg' %})" class="overlay">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
+                  <br><br><br><h1 class="primary-heading">Detox</h1>
+                  <h3 class="secondary-heading">Sucos</h3>
+                  <p class="sub-heading">#PraticoEquilibradoDelicioso </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </li>
+        <li style="background-image: url({% static 'img/hero_bg_3.jpeg' %})" class="overlay">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
+                  <br><br><br><h1 class="primary-heading">Fit</h1>
+                  <h3 class="secondary-heading">Marmitas</h3>
+                  <p class="sub-heading">#PraticoEquilibradoDelicioso </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
