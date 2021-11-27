@@ -92,7 +92,7 @@ DATABASES = {
 }
 '''
 DATABASES = {
-    'default': dj_database_url()
+    'default': dj_database_url.config()
 
 }
 
